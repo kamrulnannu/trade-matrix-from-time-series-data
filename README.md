@@ -1,4 +1,4 @@
-PROBLEM DESCRIPTION:  
+### PROBLEM DESCRIPTION:  
   The task is to compute trade stat/matrix after market close from time series
   data which are comming from a exchange. The format of sample time series data:
 
@@ -25,7 +25,7 @@ Implement code to address followings:
  3. The code should not process invalid time series data
  4. Due to large input timeseries data consider the fact of machine's main memory limitation
 ----------------------------------------------------------------------
-1. Build and test instruction are provided in build_instruction.txt file
+1. Build and test instruction are provided in **build_instruction.txt** file
 2. Command used to run: command input_file output_file
    - 1st arument is the command
    - 2nd argument is the input file

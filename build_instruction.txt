@@ -1,0 +1,45 @@
+1. cd to project root directory. Execute following shell commands:
+    $ rm -rf build
+    $ mkdir build
+
+2. If plan to use CMakePresets.json for compiler, build-dir or other selections
+
+   (a) For clang compiler run the following command from project root
+       directory:
+        $ cmake --preset clang
+        $ cd build/clang
+        $ make -j2      
+
+   (b) For GNU compiler run the following command from project root
+       directory:
+        $ cmake --preset gcc
+        $ cd build/gcc
+        $ make -j2
+
+3. If plan not to use CMakePresets.json file for compiler selection
+
+   (a) For clang compiler run the following command from project root
+       directory:
+        $ cd build
+        $ cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ..
+        $ make -j2
+
+    
+   (b) For GNU compiler run the following command from project root
+       directory:
+        $ cd build
+        $ cmake -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
+        $ make -j2
+ 
+
+NOTE: To validate any json file use:
+
+    $ python3 -m json.tool any_file.json"
+
+TEST: 
+    To run test from project root directory, execute one of the following
+command based on above build directory setup:
+
+    $ ./build/TradeMatrix sample_input.csv sample_output.csv
+    $ ./build/gcc/TradeMatrix sample_input.csv sample_output.csv
+    $ ./build/clang/TradeMatrix sample_input.csv sample_output.csv

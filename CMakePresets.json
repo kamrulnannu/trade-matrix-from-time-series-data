@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20
+  },
+  "configurePresets": [
+    {
+      "name": "info",
+      "displayName": "Usage Info",
+      "description": "Use: cmake --preset clang or cmake --preset gcc",
+      "hidden": true
+    },
+    {
+      "name": "clang",
+      "displayName": "Clang Build",
+      "generator": "Unix Makefiles",
+      "binaryDir": "build/clang",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "gcc",
+      "displayName": "GCC Build",
+      "generator": "Unix Makefiles",
+      "binaryDir": "build/gcc",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    }
+  ]
+}
+

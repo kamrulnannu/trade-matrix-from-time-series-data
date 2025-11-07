@@ -30,7 +30,7 @@ Implement code to address followings:
    - 1st arument is the command
    - 2nd argument is the input file
    - 3rd argument is the output file
-3. Using sample input file to test\
+3. Using sample input file to test  
     <pre>
       (i) line validation logic in the input file, eg. blank symbol or less than equal to 0 timestamp/volume/price
       (ii) whether number items in the line is 4 (A valid input line should have 4 items: timestamp, symbol, voulme, price)
@@ -42,6 +42,5 @@ Implement code to address followings:
         ERROR: Invalid symbol!, Input Line =52900033455,,9,756, Line Num=11
         ERROR: Share value <= 0!, Input Line =52900033456,aap,0,756, Line Num=12
         ERROR: Share price is <= 0!, Input Line =52900033457,aaq,9,0, Line Num=13
-        ERROR: Time stamp value <= 0!, Input Line =0,aar,9,759, Line Num=14
-        
+        ERROR: Time stamp value <= 0!, Input Line =0,aar,9,759, Line Num=14     
     <\pre>
